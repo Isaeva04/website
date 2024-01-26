@@ -1,8 +1,3 @@
-#from django.shortcuts import render
-#from .models import Post, Comment
-#from .forms import CommentForm
-
-from django.http import HttpResponse
 from django.shortcuts import render
 
 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<{% extends "base.html" %}
+{% load static %}
+{% block body%}
+<h1>Новости</h1>
+{% for i in all_news %}
+    <div class="col-md-4">
+      <div class="card md-2">
+        <img class="card-img-top" src="{% static i.image %}">
+        <div class="card-body">
+          <h5 class="card-title">{{ i.title }}</h5>
+          <p class="card-text">{{ i.description }}</p>
+          <a href="{% url 'news_detail' i.pk %}"
+            class="btn btn-primary">
+            Подробнее
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}
